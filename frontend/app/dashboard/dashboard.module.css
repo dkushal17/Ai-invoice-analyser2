@@ -1,0 +1,221 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--sp-8);
+}
+.header h2 {
+  margin-bottom: var(--sp-1);
+}
+.headerSub {
+  color: var(--on-surface-variant);
+  font-size: 0.9375rem;
+}
+.headerActions {
+  display: flex;
+  gap: var(--sp-3);
+  flex-shrink: 0;
+}
+
+/* KPI Row */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-6);
+  margin-bottom: var(--sp-8);
+}
+.kpiIconWrap {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--sp-3);
+  font-size: 20px;
+}
+.kpiDelta {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: var(--sp-1);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+.kpiUp {
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.12);
+}
+.kpiDown {
+  color: var(--error);
+  background: rgba(255, 180, 171, 0.12);
+}
+
+/* Main Grid: Line + Anomalies side-by-side */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--sp-6);
+  margin-bottom: var(--sp-8);
+}
+
+/* Chart cards */
+.chartCard {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  padding: var(--sp-6);
+}
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--sp-4);
+}
+.chartTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+.chartBadge {
+  font-size: 0.6875rem;
+  color: var(--on-surface-variant);
+  background: var(--surface-container-high);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+}
+.chartWrap {
+  height: 260px;
+  position: relative;
+}
+
+/* Anomaly section */
+.anomalySection {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  padding: var(--sp-6);
+}
+.anomalySectionTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--sp-4);
+}
+.anomalyCount {
+  margin-left: auto;
+  background: rgba(255,180,171,0.15);
+  color: var(--error);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: var(--radius-sm);
+}
+.anomalyList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+.anomalyContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-2);
+}
+.anomalyDesc {
+  color: var(--on-surface-variant);
+  font-size: 0.875rem;
+  line-height: 1.45;
+  flex: 1;
+}
+.anomalyAmount {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--error);
+  white-space: nowrap;
+}
+.anomalyMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+.anomalyTime {
+  font-size: 0.75rem;
+  color: var(--outline);
+}
+
+/* Charts row */
+.chartsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-6);
+  margin-bottom: var(--sp-8);
+}
+
+/* Recent Activity */
+.recentSection {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  padding: var(--sp-6);
+  margin-bottom: var(--sp-8);
+}
+.recentTable {
+  overflow-x: auto;
+}
+.viewAll {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--primary);
+  transition: color var(--transition-fast);
+}
+.viewAll:hover {
+  color: var(--primary-container);
+}
+
+/* Empty State */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--sp-20) var(--sp-10);
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  border: 2px dashed var(--surface-container-high);
+  margin-top: var(--sp-4);
+}
+.emptyIcon {
+  font-size: 64px;
+  color: var(--outline);
+  margin-bottom: var(--sp-6);
+  opacity: 0.5;
+}
+.emptyTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--sp-2);
+}
+.emptyText {
+  color: var(--on-surface-variant);
+  max-width: 480px;
+  margin-bottom: var(--sp-8);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1280px) {
+  .statsRow { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 1024px) {
+  .statsRow { grid-template-columns: 1fr; }
+  .mainGrid { grid-template-columns: 1fr; }
+  .chartsRow { grid-template-columns: 1fr; }
+  .header { flex-direction: column; gap: var(--sp-4); }
+}

@@ -1,0 +1,180 @@
+.header {
+  margin-bottom: var(--sp-8);
+}
+.header h2 {
+  margin-bottom: var(--sp-1);
+}
+.headerSub {
+  color: var(--on-surface-variant);
+  font-size: 0.9375rem;
+}
+
+/* KPI Row */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-6);
+  margin-bottom: var(--sp-8);
+}
+.kpiIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--sp-3);
+  font-size: 20px;
+}
+.kpiDelta {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: var(--sp-1);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+.kpiUp {
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.12);
+}
+.kpiDown {
+  color: var(--error);
+  background: rgba(255, 180, 171, 0.12);
+}
+
+/* Charts grid */
+.chartsRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--sp-6);
+  margin-bottom: var(--sp-8);
+}
+.chartCard {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  padding: var(--sp-6);
+}
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--sp-4);
+}
+.chartTitle {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.chartBadge {
+  font-size: 0.6875rem;
+  color: var(--on-surface-variant);
+  background: var(--surface-container-high);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+}
+.chartWrap {
+  height: 280px;
+  position: relative;
+}
+
+/* Vendor bar chart full-width */
+.vendorSection {
+  margin-bottom: var(--sp-8);
+}
+.vendorChartWrap {
+  height: 220px;
+  position: relative;
+}
+
+/* Monthly Comparison Table */
+.comparisonSection {
+  margin-bottom: var(--sp-8);
+}
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 1.25rem;
+  margin-bottom: var(--sp-4);
+}
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-4);
+}
+.compCard {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-5) var(--sp-6);
+  transition: all var(--transition-base);
+}
+.compCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+}
+.compMonth {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--on-surface-variant);
+  margin-bottom: var(--sp-2);
+}
+.compValue {
+  font-family: var(--font-headline);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: var(--sp-1);
+}
+.compMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+.compInvoices {
+  font-size: 0.75rem;
+  color: var(--outline);
+}
+
+/* Empty State */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--sp-20) var(--sp-10);
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--surface-container-high);
+  margin-top: var(--sp-4);
+}
+.emptyIcon {
+  font-size: 48px;
+  color: var(--primary);
+  margin-bottom: var(--sp-4);
+  opacity: 0.3;
+}
+.emptyTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--sp-2);
+}
+.emptyText {
+  color: var(--on-surface-variant);
+  max-width: 400px;
+  margin-bottom: var(--sp-6);
+}
+
+/* Responsive */
+@media (max-width: 1280px) {
+  .statsRow { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 1024px) {
+  .statsRow { grid-template-columns: 1fr; }
+  .chartsRow { grid-template-columns: 1fr; }
+  .comparisonGrid { grid-template-columns: 1fr; }
+}

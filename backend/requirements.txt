@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+pdfplumber
+requests
+supabase
+python-dotenv
+pytesseract
+pdf2image
+groq

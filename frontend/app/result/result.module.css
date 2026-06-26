@@ -1,0 +1,195 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--sp-8);
+}
+.header h2 {
+  margin-bottom: var(--sp-1);
+}
+.headerSub {
+  color: var(--on-surface-variant);
+  font-size: 0.9375rem;
+}
+.headerBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-2);
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-6);
+  margin-bottom: var(--sp-8);
+}
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+/* Section card */
+.section {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  padding: var(--sp-6);
+}
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-5);
+  padding-bottom: var(--sp-3);
+  border-bottom: 1px solid var(--outline-variant);
+}
+.sectionIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(46,102,255,0.1);
+  color: var(--primary-container);
+}
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Data fields */
+.dataGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-4);
+}
+.dataField {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.dataLabel {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--on-surface-variant);
+}
+.dataValue {
+  font-family: var(--font-headline);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--on-surface);
+}
+.dataValueLarge {
+  font-size: 1.75rem;
+  color: var(--primary);
+}
+
+/* Findings list */
+.findingsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+.finding {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--radius-lg);
+  background: var(--surface-container);
+}
+.findingOk {
+  border-left: 3px solid #34d399;
+}
+.findingWarning {
+  border-left: 3px solid var(--secondary);
+}
+.findingIcon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.findingText {
+  font-size: 0.9375rem;
+  color: var(--on-surface-variant);
+  line-height: 1.45;
+}
+
+/* Comparison bar */
+.comparisonRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+.compItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+.compLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--on-surface-variant);
+}
+.compBarTrack {
+  height: 12px;
+  background: var(--surface-container-high);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.compBarFill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 1s ease;
+}
+.compBarCurrent {
+  background: var(--primary-container);
+}
+.compBarAvg {
+  background: var(--outline);
+}
+.compValue {
+  font-family: var(--font-headline);
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+.compDelta {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  margin-top: var(--sp-2);
+}
+.compDeltaUp {
+  color: var(--error);
+  background: rgba(255,180,171,0.12);
+}
+.compDeltaDown {
+  color: #34d399;
+  background: rgba(52,211,153,0.12);
+}
+.compDeltaNeutral {
+  color: var(--on-surface-variant);
+  background: var(--surface-container-high);
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: 1fr; }
+  .dataGrid { grid-template-columns: 1fr; }
+  .header { flex-direction: column; gap: var(--sp-4); }
+}

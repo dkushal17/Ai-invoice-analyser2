@@ -1,0 +1,126 @@
+.header {
+  margin-bottom: var(--sp-8);
+}
+.headerSub {
+  color: var(--on-surface-variant);
+  font-size: 1rem;
+  margin-top: var(--sp-2);
+  max-width: 640px;
+}
+
+.dragActive {
+  border-color: var(--primary-container) !important;
+  background: rgba(46,102,255,0.06) !important;
+  box-shadow: 0 0 40px rgba(46,102,255,0.12) !important;
+}
+
+.formats {
+  display: flex;
+  gap: var(--sp-2);
+  margin-top: var(--sp-2);
+}
+.formatBadge {
+  padding: var(--sp-1) var(--sp-3);
+  background: var(--surface-container-high);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--on-surface-variant);
+  letter-spacing: 0.03em;
+}
+
+.uploadsSection {
+  margin-top: var(--sp-10);
+}
+.uploadsTitle {
+  font-size: 1.25rem;
+  margin-bottom: var(--sp-4);
+}
+.uploadsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+.fileCard {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-5) var(--sp-6);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+.fileCard:hover {
+  transform: translateX(4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+.fileInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+.fileIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: rgba(46,102,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+.fileIcon .material-icons { font-size: 20px; }
+.fileMeta { flex: 1; }
+.fileName {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--on-surface);
+}
+.fileSize {
+  font-size: 0.8125rem;
+  color: var(--on-surface-variant);
+  margin-top: 2px;
+}
+
+.infoRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-6);
+  margin-top: var(--sp-10);
+}
+.infoCard {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  padding: var(--sp-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  transition: all var(--transition-base);
+}
+.infoCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+}
+.infoCard h4 {
+  font-size: 1.125rem;
+  color: var(--on-surface);
+}
+.infoCard p {
+  color: var(--on-surface-variant);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+.infoIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-lg);
+  background: rgba(46,102,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .infoRow { grid-template-columns: 1fr; }
+}
